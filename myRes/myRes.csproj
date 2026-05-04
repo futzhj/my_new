@@ -6,6 +6,7 @@
     <TargetFramework>net48</TargetFramework>
     <PlatformTarget>x64</PlatformTarget>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>14.0</LangVersion>
@@ -15,6 +16,9 @@
   <PropertyGroup>
     <RootNamespace />
   </PropertyGroup>
+  <!-- WPF g.resources 合并修复：导入 inline task（详见 build/MergeGResources.targets） -->
+  <Import Project="$(MSBuildThisFileDirectory)..\build\MergeGResources.targets" />
+
   <ItemGroup>
     <None Remove="roles\img_-e9-a3-9e-e7-87-95-e5-a5-b3.png" />
     <None Remove="roles\img_-e6-9d-80-e7-a0-b4-e7-8b-bc.png" />

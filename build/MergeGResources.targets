@@ -1,0 +1,96 @@
+<Project>
+  <!--
+    MergeGResources inline MSBuild task.
+
+    Problem: ILSpy-decompiled csproj lists every .baml/.png as a separate
+    <EmbeddedResource>. SDK-style build embeds each as a top-level manifest
+    resource, so WPF LoadComponent("/<asm>;component/<name>.xaml") fails to
+    find <name>.baml inside <asm>.g.resources (they are siblings, not members).
+
+    Fix: before CoreCompile runs, consolidate every <EmbeddedResource> file
+    into a single <AssemblyName>.g.resources (Stream-typed entries), and
+    replace the EmbeddedResource ItemGroup so the compiler embeds only that
+    one merged resource.
+  -->
+
+  <UsingTask TaskName="MergeWpfGResourcesTask" TaskFactory="RoslynCodeTaskFactory"
+             AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <ParameterGroup>
+      <CsprojPath  ParameterType="System.String" Required="true" />
+      <OutputPath  ParameterType="System.String" Required="true" />
+      <Count       ParameterType="System.Int32"  Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System" />
+      <Using Namespace="System.Collections.Generic" />
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.Resources" />
+      <Using Namespace="System.Xml" />
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        string projectDir = Path.GetDirectoryName(CsprojPath);
+
+        XmlDocument doc = new XmlDocument();
+        doc.Load(CsprojPath);
+        XmlNodeList items = doc.SelectNodes("//ItemGroup/EmbeddedResource");
+
+        List<KeyValuePair<string, string>> entries = new List<KeyValuePair<string, string>>();
+        foreach (XmlElement item in items)
+        {
+            string include = item.GetAttribute("Include");
+            if (string.IsNullOrEmpty(include)) continue;
+            if (include.Contains("$(")) continue; // skip msbuild-variable includes
+
+            string logical = item.GetAttribute("LogicalName");
+            if (string.IsNullOrEmpty(logical))
+            {
+                XmlElement child = item.SelectSingleNode("LogicalName") as XmlElement;
+                if (child != null) logical = child.InnerText;
+            }
+            if (string.IsNullOrEmpty(logical)) logical = include.Replace('\\', '/');
+            if (string.IsNullOrEmpty(logical)) continue;
+
+            string fullPath = Path.IsPathRooted(include) ? include : Path.Combine(projectDir, include);
+            if (!File.Exists(fullPath))
+            {
+                Log.LogWarning("Resource file not found, skipped: " + fullPath);
+                continue;
+            }
+
+            entries.Add(new KeyValuePair<string, string>(fullPath, logical.ToLowerInvariant()));
+        }
+
+        string outDir = Path.GetDirectoryName(OutputPath);
+        if (!Directory.Exists(outDir)) Directory.CreateDirectory(outDir);
+
+        int written = 0;
+        using (ResourceWriter writer = new ResourceWriter(OutputPath))
+        {
+            List<MemoryStream> streams = new List<MemoryStream>(entries.Count);
+            foreach (KeyValuePair<string, string> e in entries)
+            {
+                byte[] bytes = File.ReadAllBytes(e.Key);
+                MemoryStream ms = new MemoryStream(bytes, 0, bytes.Length, false, true);
+                streams.Add(ms);
+                writer.AddResource(e.Value, ms, false);
+                written++;
+            }
+            writer.Generate();
+        }
+        Count = written;
+        Log.LogMessage(MessageImportance.High, "Merged " + written + " embedded resources into " + OutputPath);
+      ]]></Code>
+    </Task>
+  </UsingTask>
+
+  <!-- The actual target that runs before the WPF EmbeddedResource assignment -->
+  <Target Name="MergeWpfGResources" BeforeTargets="AssignTargetPaths;PrepareResources">
+    <MergeWpfGResourcesTask
+        CsprojPath="$(MSBuildProjectFullPath)"
+        OutputPath="$(IntermediateOutputPath)$(AssemblyName).g.resources" />
+    <ItemGroup>
+      <EmbeddedResource Remove="@(EmbeddedResource)" />
+      <EmbeddedResource Include="$(IntermediateOutputPath)$(AssemblyName).g.resources"
+                        LogicalName="$(AssemblyName).g.resources" />
+    </ItemGroup>
+  </Target>
+</Project>

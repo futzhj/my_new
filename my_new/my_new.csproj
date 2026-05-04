@@ -8,6 +8,7 @@
     <TargetFramework>net48</TargetFramework>
     <PlatformTarget>x64</PlatformTarget>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>14.0</LangVersion>
@@ -18,6 +19,9 @@
     <ApplicationIcon>app.ico</ApplicationIcon>
     <RootNamespace />
   </PropertyGroup>
+  <!-- WPF g.resources 合并修复：导入 inline task（详见 build/MergeGResources.targets） -->
+  <Import Project="$(MSBuildThisFileDirectory)..\build\MergeGResources.targets" />
+
   <ItemGroup>
     <None Remove="resources\images\img_-e9-80-82-e9-be-84-e6-8f-90-e7-a4-ba.png" />
     <None Remove="launch.baml" />
