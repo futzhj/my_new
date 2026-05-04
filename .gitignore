@@ -1,0 +1,32 @@
+# Build output
+bin/
+obj/
+*.user
+*.suo
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.userosscache
+*.sln.docstates
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Backup files
+*.bak
+*.original
+build_log.txt
+
+# NuGet
+packages/
+*.nupkg
+
+# Roslyn cache
+.roslyn/
+
+# Misc local
+*.log
+*.tmp

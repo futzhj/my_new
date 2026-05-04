@@ -1,0 +1,67 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    env:
+      DOTNET_NOLOGO: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+      Configuration: Release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+
+      - name: Show environment
+        shell: pwsh
+        run: |
+          dotnet --info
+          Write-Host "---"
+          Get-ChildItem -Recurse -Filter *.csproj | ForEach-Object { $_.FullName }
+
+      - name: Restore
+        run: dotnet restore my_new.sln
+
+      - name: Build
+        run: dotnet build my_new.sln -c $env:Configuration --no-restore /p:Platform="Any CPU"
+
+      - name: List build output
+        shell: pwsh
+        run: |
+          $out = "my_new\bin\x64\$env:Configuration"
+          if (-not (Test-Path $out)) { $out = "my_new\bin\$env:Configuration" }
+          Write-Host "Output dir: $out"
+          if (Test-Path $out) {
+            Get-ChildItem -Recurse $out | Select-Object FullName, Length | Format-Table -AutoSize
+          } else {
+            Write-Host "No build output found, listing all bin/ subdirectories..."
+            Get-ChildItem -Recurse -Filter bin | ForEach-Object { Get-ChildItem -Recurse $_.FullName }
+          }
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my_new-${{ github.run_number }}
+          path: |
+            my_new/bin/**/Release/**/my_new.exe
+            my_new/bin/**/Release/**/my_new.exe.config
+            my_new/bin/**/Release/**/myRes.dll
+            my_new/bin/**/Release/**/updater.dll
+            my_new/bin/**/Release/**/httpdns.dll
+            my_new/bin/**/Release/**/*.pdb
+          if-no-files-found: warn
+          retention-days: 30

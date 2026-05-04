@@ -1,0 +1,282 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>my_new</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="resources\images\img_-e9-80-82-e9-be-84-e6-8f-90-e7-a4-ba.png" />
+    <None Remove="launch.baml" />
+    <None Remove="resources\images\pop_-e8-ae-be-e7-bd-ae.png" />
+    <None Remove="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e5-89-8d-e7-ab-af.png" />
+    <None Remove="resources\roles\img_-e9-aa-a8-e7-b2-be-e7-81-b5.png" />
+    <None Remove="remotechecker.baml" />
+    <None Remove="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960002.png" />
+    <None Remove="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960003.png" />
+    <None Remove="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960000.png" />
+    <None Remove="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960001.png" />
+    <None Remove="resources\images\xylaunch.ico" />
+    <None Remove="resources\images\btn_-e5-85-85-e5-80-bc0003.png" />
+    <None Remove="resources\images\btn_-e5-85-85-e5-80-bc0002.png" />
+    <None Remove="resources\images\btn_-e5-85-85-e5-80-bc0001.png" />
+    <None Remove="resources\images\btn_-e5-85-85-e5-80-bc0000.png" />
+    <None Remove="resources\images\img_-e5-8d-b7-e8-bd-b4.png" />
+    <None Remove="resources\images\btn_-e5-ae-98-e7-bd-910002.png" />
+    <None Remove="resources\images\btn_-e5-ae-98-e7-bd-910000.png" />
+    <None Remove="resources\images\btn_-e5-ae-98-e7-bd-910003.png" />
+    <None Remove="resources\images\btn_-e5-ae-98-e7-bd-910001.png" />
+    <None Remove="resources\images\img_-e6-a2-a6-e5-b9-bb-e8-a5-bf-e6-b8-b8.png" />
+    <None Remove="resources\images\btn_-e5-b7-a5-e5-85-b70002.png" />
+    <None Remove="resources\images\btn_-e5-b7-a5-e5-85-b70000.png" />
+    <None Remove="resources\images\btn_-e5-b7-a5-e5-85-b70003.png" />
+    <None Remove="resources\images\btn_-e5-b7-a5-e5-85-b70001.png" />
+    <None Remove="resources\images\img_-e4-b8-ad-e9-97-b4-e5-85-ac-e5-91-8a-e5-ba-95.png" />
+    <None Remove="resources\images\btn_-e5-85-b3-e9-97-ad0001.png" />
+    <None Remove="resources\images\btn_-e5-85-b3-e9-97-ad0000.png" />
+    <None Remove="resources\images\btn_-e5-85-b3-e9-97-ad0003.png" />
+    <None Remove="resources\images\btn_-e5-85-b3-e9-97-ad0002.png" />
+    <None Remove="xylaunch.ico" />
+    <None Remove="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e7-ba-a22.png" />
+    <None Remove="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e7-ba-a21.png" />
+    <None Remove="themes\generic.baml" />
+    <None Remove="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e9-81-ae-e7-bd-a9.png" />
+    <None Remove="resources\images\btn_-e6-b3-a8-e5-86-8c0000.png" />
+    <None Remove="resources\images\btn_-e6-b3-a8-e5-86-8c0001.png" />
+    <None Remove="resources\images\btn_-e6-b3-a8-e5-86-8c0002.png" />
+    <None Remove="resources\images\btn_-e6-b3-a8-e5-86-8c0003.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70006.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70004.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70007.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70002.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70005.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70000.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70003.png" />
+    <None Remove="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70001.png" />
+    <None Remove="resources\images\img_-e6-89-a9-e5-b1-95-e5-ba-951.png" />
+    <None Remove="resources\images\img_-e6-89-a9-e5-b1-95-e5-ba-952.png" />
+    <None Remove="resources\images\img_-e4-b8-8b-e6-8b-89-e5-ba-95.png" />
+    <None Remove="resources\images\img_banner.png" />
+    <None Remove="resources\images\btn_-e4-b8-8b-e6-8b-890003.png" />
+    <None Remove="resources\images\btn_-e4-b8-8b-e6-8b-890002.png" />
+    <None Remove="resources\images\btn_-e4-b8-8b-e6-8b-890001.png" />
+    <None Remove="resources\images\btn_-e4-b8-8b-e6-8b-890000.png" />
+    <None Remove="resources\images\img_-e5-8a-a0-e8-bd-bd-e4-b8-ad.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-89.png" />
+    <None Remove="mainwindow.baml" />
+    <None Remove="webbrowseroverlay.baml" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0001.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0003.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0000.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0005.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0002.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0007.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0004.png" />
+    <None Remove="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0006.png" />
+    <None Remove="resources\images\img_logo.png" />
+    <None Remove="resources\images\btn_pop_-e5-85-b3-e9-97-ad0000.png" />
+    <None Remove="resources\images\btn_pop_-e5-85-b3-e9-97-ad0002.png" />
+    <None Remove="resources\images\btn_pop_-e5-85-b3-e9-97-ad0001.png" />
+    <None Remove="resources\images\btn_pop_-e5-85-b3-e9-97-ad0003.png" />
+    <None Remove="resources\images\btn_-e8-ae-be-e7-bd-ae0001.png" />
+    <None Remove="resources\images\btn_-e8-ae-be-e7-bd-ae0003.png" />
+    <None Remove="resources\images\btn_-e8-ae-be-e7-bd-ae0000.png" />
+    <None Remove="resources\images\btn_-e8-ae-be-e7-bd-ae0002.png" />
+    <None Remove="resources\font\hkyt.ttf" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890029.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890028.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890021.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890020.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890023.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890022.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890025.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890024.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890027.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890026.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890009.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890008.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890003.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890002.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890001.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890000.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890007.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890006.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890005.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890004.png" />
+    <None Remove="resources\resource.baml" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890019.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890018.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890013.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890011.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890012.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890017.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890010.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890015.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890016.png" />
+    <None Remove="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890014.png" />
+    <None Remove="settingdialog.baml" />
+    <None Remove="app.baml" />
+    <None Remove="resources\images\btn_-e7-99-bb-e5-bd-95-e5-8a-a0-e8-bd-bd-e4-b8-ad.png" />
+    <None Remove="resources\images\btn_-e6-94-b6-e8-b5-b70003.png" />
+    <None Remove="resources\images\btn_-e6-94-b6-e8-b5-b70002.png" />
+    <None Remove="resources\images\btn_-e6-94-b6-e8-b5-b70001.png" />
+    <None Remove="resources\images\btn_-e6-94-b6-e8-b5-b70000.png" />
+    <None Remove="resources\images\btn_-e7-99-bb-e5-bd-950003.png" />
+    <None Remove="resources\images\btn_-e7-99-bb-e5-bd-950001.png" />
+    <None Remove="resources\images\btn_-e7-99-bb-e5-bd-950002.png" />
+    <None Remove="resources\images\btn_-e7-99-bb-e5-bd-950000.png" />
+    <EmbeddedResource Include="resources\images\img_-e9-80-82-e9-be-84-e6-8f-90-e7-a4-ba.png" LogicalName="resources/images/img_%e9%80%82%e9%be%84%e6%8f%90%e7%a4%ba.png" />
+    <EmbeddedResource Include="launch.baml" LogicalName="launch.baml" />
+    <EmbeddedResource Include="resources\images\pop_-e8-ae-be-e7-bd-ae.png" LogicalName="resources/images/pop_%e8%ae%be%e7%bd%ae.png" />
+    <EmbeddedResource Include="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e5-89-8d-e7-ab-af.png" LogicalName="resources/images/img_%e8%bf%9b%e5%ba%a6%e6%9d%a1%e5%89%8d%e7%ab%af.png" />
+    <EmbeddedResource Include="resources\roles\img_-e9-aa-a8-e7-b2-be-e7-81-b5.png" LogicalName="resources/roles/img_%e9%aa%a8%e7%b2%be%e7%81%b5.png" />
+    <EmbeddedResource Include="remotechecker.baml" LogicalName="remotechecker.baml" />
+    <EmbeddedResource Include="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960002.png" LogicalName="resources/images/btn_%e6%9c%80%e5%b0%8f%e5%8c%960002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960003.png" LogicalName="resources/images/btn_%e6%9c%80%e5%b0%8f%e5%8c%960003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960000.png" LogicalName="resources/images/btn_%e6%9c%80%e5%b0%8f%e5%8c%960000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-9c-80-e5-b0-8f-e5-8c-960001.png" LogicalName="resources/images/btn_%e6%9c%80%e5%b0%8f%e5%8c%960001.png" />
+    <EmbeddedResource Include="resources\images\xylaunch.ico" LogicalName="resources/images/xylaunch.ico" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-85-e5-80-bc0003.png" LogicalName="resources/images/btn_%e5%85%85%e5%80%bc0003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-85-e5-80-bc0002.png" LogicalName="resources/images/btn_%e5%85%85%e5%80%bc0002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-85-e5-80-bc0001.png" LogicalName="resources/images/btn_%e5%85%85%e5%80%bc0001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-85-e5-80-bc0000.png" LogicalName="resources/images/btn_%e5%85%85%e5%80%bc0000.png" />
+    <EmbeddedResource Include="resources\images\img_-e5-8d-b7-e8-bd-b4.png" LogicalName="resources/images/img_%e5%8d%b7%e8%bd%b4.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-ae-98-e7-bd-910002.png" LogicalName="resources/images/btn_%e5%ae%98%e7%bd%910002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-ae-98-e7-bd-910000.png" LogicalName="resources/images/btn_%e5%ae%98%e7%bd%910000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-ae-98-e7-bd-910003.png" LogicalName="resources/images/btn_%e5%ae%98%e7%bd%910003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-ae-98-e7-bd-910001.png" LogicalName="resources/images/btn_%e5%ae%98%e7%bd%910001.png" />
+    <EmbeddedResource Include="resources\images\img_-e6-a2-a6-e5-b9-bb-e8-a5-bf-e6-b8-b8.png" LogicalName="resources/images/img_%e6%a2%a6%e5%b9%bb%e8%a5%bf%e6%b8%b8.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-b7-a5-e5-85-b70002.png" LogicalName="resources/images/btn_%e5%b7%a5%e5%85%b70002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-b7-a5-e5-85-b70000.png" LogicalName="resources/images/btn_%e5%b7%a5%e5%85%b70000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-b7-a5-e5-85-b70003.png" LogicalName="resources/images/btn_%e5%b7%a5%e5%85%b70003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-b7-a5-e5-85-b70001.png" LogicalName="resources/images/btn_%e5%b7%a5%e5%85%b70001.png" />
+    <EmbeddedResource Include="resources\images\img_-e4-b8-ad-e9-97-b4-e5-85-ac-e5-91-8a-e5-ba-95.png" LogicalName="resources/images/img_%e4%b8%ad%e9%97%b4%e5%85%ac%e5%91%8a%e5%ba%95.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-b3-e9-97-ad0001.png" LogicalName="resources/images/btn_%e5%85%b3%e9%97%ad0001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-b3-e9-97-ad0000.png" LogicalName="resources/images/btn_%e5%85%b3%e9%97%ad0000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-b3-e9-97-ad0003.png" LogicalName="resources/images/btn_%e5%85%b3%e9%97%ad0003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e5-85-b3-e9-97-ad0002.png" LogicalName="resources/images/btn_%e5%85%b3%e9%97%ad0002.png" />
+    <EmbeddedResource Include="xylaunch.ico" LogicalName="xylaunch.ico" />
+    <EmbeddedResource Include="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e7-ba-a22.png" LogicalName="resources/images/img_%e8%bf%9b%e5%ba%a6%e6%9d%a1%e7%ba%a22.png" />
+    <EmbeddedResource Include="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e7-ba-a21.png" LogicalName="resources/images/img_%e8%bf%9b%e5%ba%a6%e6%9d%a1%e7%ba%a21.png" />
+    <EmbeddedResource Include="themes\generic.baml" LogicalName="themes/generic.baml" />
+    <EmbeddedResource Include="resources\images\img_-e8-bf-9b-e5-ba-a6-e6-9d-a1-e9-81-ae-e7-bd-a9.png" LogicalName="resources/images/img_%e8%bf%9b%e5%ba%a6%e6%9d%a1%e9%81%ae%e7%bd%a9.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-b3-a8-e5-86-8c0000.png" LogicalName="resources/images/btn_%e6%b3%a8%e5%86%8c0000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-b3-a8-e5-86-8c0001.png" LogicalName="resources/images/btn_%e6%b3%a8%e5%86%8c0001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-b3-a8-e5-86-8c0002.png" LogicalName="resources/images/btn_%e6%b3%a8%e5%86%8c0002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-b3-a8-e5-86-8c0003.png" LogicalName="resources/images/btn_%e6%b3%a8%e5%86%8c0003.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70006.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70006.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70004.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70004.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70007.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70007.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70002.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70002.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70005.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70005.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70000.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70000.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70003.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70003.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-85-b6-e4-bb-96-e5-b7-a5-e5-85-b70001.png" LogicalName="resources/images/tab_%e5%85%b6%e4%bb%96%e5%b7%a5%e5%85%b70001.png" />
+    <EmbeddedResource Include="resources\images\img_-e6-89-a9-e5-b1-95-e5-ba-951.png" LogicalName="resources/images/img_%e6%89%a9%e5%b1%95%e5%ba%951.png" />
+    <EmbeddedResource Include="resources\images\img_-e6-89-a9-e5-b1-95-e5-ba-952.png" LogicalName="resources/images/img_%e6%89%a9%e5%b1%95%e5%ba%952.png" />
+    <EmbeddedResource Include="resources\images\img_-e4-b8-8b-e6-8b-89-e5-ba-95.png" LogicalName="resources/images/img_%e4%b8%8b%e6%8b%89%e5%ba%95.png" />
+    <EmbeddedResource Include="resources\images\img_banner.png" LogicalName="resources/images/img_banner.png" />
+    <EmbeddedResource Include="resources\images\btn_-e4-b8-8b-e6-8b-890003.png" LogicalName="resources/images/btn_%e4%b8%8b%e6%8b%890003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e4-b8-8b-e6-8b-890002.png" LogicalName="resources/images/btn_%e4%b8%8b%e6%8b%890002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e4-b8-8b-e6-8b-890001.png" LogicalName="resources/images/btn_%e4%b8%8b%e6%8b%890001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e4-b8-8b-e6-8b-890000.png" LogicalName="resources/images/btn_%e4%b8%8b%e6%8b%890000.png" />
+    <EmbeddedResource Include="resources\images\img_-e5-8a-a0-e8-bd-bd-e4-b8-ad.png" LogicalName="resources/images/img_%e5%8a%a0%e8%bd%bd%e4%b8%ad.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-89.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%89.png" />
+    <EmbeddedResource Include="mainwindow.baml" LogicalName="mainwindow.baml" />
+    <EmbeddedResource Include="webbrowseroverlay.baml" LogicalName="webbrowseroverlay.baml" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0001.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0001.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0003.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0003.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0000.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0000.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0005.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0005.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0002.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0002.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0007.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0007.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0004.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0004.png" />
+    <EmbeddedResource Include="resources\images\tab_-e5-b8-b8-e8-a7-84-e8-ae-be-e7-bd-ae0006.png" LogicalName="resources/images/tab_%e5%b8%b8%e8%a7%84%e8%ae%be%e7%bd%ae0006.png" />
+    <EmbeddedResource Include="resources\images\img_logo.png" LogicalName="resources/images/img_logo.png" />
+    <EmbeddedResource Include="resources\images\btn_pop_-e5-85-b3-e9-97-ad0000.png" LogicalName="resources/images/btn_pop_%e5%85%b3%e9%97%ad0000.png" />
+    <EmbeddedResource Include="resources\images\btn_pop_-e5-85-b3-e9-97-ad0002.png" LogicalName="resources/images/btn_pop_%e5%85%b3%e9%97%ad0002.png" />
+    <EmbeddedResource Include="resources\images\btn_pop_-e5-85-b3-e9-97-ad0001.png" LogicalName="resources/images/btn_pop_%e5%85%b3%e9%97%ad0001.png" />
+    <EmbeddedResource Include="resources\images\btn_pop_-e5-85-b3-e9-97-ad0003.png" LogicalName="resources/images/btn_pop_%e5%85%b3%e9%97%ad0003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e8-ae-be-e7-bd-ae0001.png" LogicalName="resources/images/btn_%e8%ae%be%e7%bd%ae0001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e8-ae-be-e7-bd-ae0003.png" LogicalName="resources/images/btn_%e8%ae%be%e7%bd%ae0003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e8-ae-be-e7-bd-ae0000.png" LogicalName="resources/images/btn_%e8%ae%be%e7%bd%ae0000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e8-ae-be-e7-bd-ae0002.png" LogicalName="resources/images/btn_%e8%ae%be%e7%bd%ae0002.png" />
+    <EmbeddedResource Include="resources\font\hkyt.ttf" LogicalName="resources/font/hkyt.ttf" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890029.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890029.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890028.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890028.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890021.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890021.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890020.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890020.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890023.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890023.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890022.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890022.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890025.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890025.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890024.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890024.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890027.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890027.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890026.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890026.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890009.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890009.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890008.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890008.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890003.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890003.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890002.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890002.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890001.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890001.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890000.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890000.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890007.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890007.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890006.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890006.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890005.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890005.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890004.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890004.png" />
+    <EmbeddedResource Include="resources\resource.baml" LogicalName="resources/resource.baml" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890019.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890019.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890018.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890018.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890013.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890013.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890011.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890011.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890012.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890012.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890017.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890017.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890010.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890010.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890015.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890015.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890016.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890016.png" />
+    <EmbeddedResource Include="resources\-e7-99-bb-e5-bd-95-e6-8c-89-e9-92-ae-e6-b5-81-e5-85-89\anim_-e6-b5-81-e5-85-890014.png" LogicalName="resources/%e7%99%bb%e5%bd%95%e6%8c%89%e9%92%ae%e6%b5%81%e5%85%89/anim_%e6%b5%81%e5%85%890014.png" />
+    <EmbeddedResource Include="settingdialog.baml" LogicalName="settingdialog.baml" />
+    <EmbeddedResource Include="app.baml" LogicalName="app.baml" />
+    <EmbeddedResource Include="resources\images\btn_-e7-99-bb-e5-bd-95-e5-8a-a0-e8-bd-bd-e4-b8-ad.png" LogicalName="resources/images/btn_%e7%99%bb%e5%bd%95%e5%8a%a0%e8%bd%bd%e4%b8%ad.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-94-b6-e8-b5-b70003.png" LogicalName="resources/images/btn_%e6%94%b6%e8%b5%b70003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-94-b6-e8-b5-b70002.png" LogicalName="resources/images/btn_%e6%94%b6%e8%b5%b70002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-94-b6-e8-b5-b70001.png" LogicalName="resources/images/btn_%e6%94%b6%e8%b5%b70001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e6-94-b6-e8-b5-b70000.png" LogicalName="resources/images/btn_%e6%94%b6%e8%b5%b70000.png" />
+    <EmbeddedResource Include="resources\images\btn_-e7-99-bb-e5-bd-950003.png" LogicalName="resources/images/btn_%e7%99%bb%e5%bd%950003.png" />
+    <EmbeddedResource Include="resources\images\btn_-e7-99-bb-e5-bd-950001.png" LogicalName="resources/images/btn_%e7%99%bb%e5%bd%950001.png" />
+    <EmbeddedResource Include="resources\images\btn_-e7-99-bb-e5-bd-950002.png" LogicalName="resources/images/btn_%e7%99%bb%e5%bd%950002.png" />
+    <EmbeddedResource Include="resources\images\btn_-e7-99-bb-e5-bd-950000.png" LogicalName="resources/images/btn_%e7%99%bb%e5%bd%950000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\myRes\myRes.csproj">
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="refs\updater.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>updater.dll</Link>
+    </None>
+    <None Include="refs\httpdns.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>httpdns.dll</Link>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+namespace my_new.utils;
+
+internal enum LOG_CHANNEL
+{
+	LOG_CHANNEL_UNKNOWN = -1,
+	LOG_CHANNEL_MAIN = 0,
+	LOG_CHANNEL_CLICK = 1,
+	LOG_CHANNEL_COUNT = 2,
+	LOG_CHANNEL_MAX_COUNT = 256
+}

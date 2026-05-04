@@ -1,0 +1,15 @@
+namespace my_new.utils;
+
+internal enum UPDATE_MODE
+{
+	UNDEFINED = -1,
+	NORMAL,
+	NORMAL_EX,
+	CHECK,
+	CHECK_CLEAR,
+	CHECK_UPDATE,
+	CHECK_UPDATE_CLEAR,
+	EXT_PKG,
+	REPAIR,
+	SKIP
+}
